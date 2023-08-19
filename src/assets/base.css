@@ -1,0 +1,31 @@
+:root {
+  --primary: #0D6EFD;
+  --secondary: #6C757D;
+  --processing: lightgreen;
+  --danger: red;
+  --warning: rgb(255, 217, 0);
+  --light: #FFFFFF;
+  --dark: black;
+  --dark-shadow: #00000003;
+  --gray: #6C757D;
+  --grayish-light: #E9ECEF;
+}
+
+/* semantic color variables for this project */
+:root {
+  --font-dark: var(--dark);
+  --font-ligh: var(--light);
+  --selected: var(--primary);
+  --font-color-description:  var(--gray);
+  --border-color: var(--grayish-light);
+  --default-backgroung-color: var(--light);
+  --shadow: var(--dark-shadow);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}

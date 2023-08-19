@@ -1,0 +1,18 @@
+@import './base.css';
+@import './styles/small_header.scss';
+@import './styles/button.scss';
+
+#app {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  /* color: var(--grayish-light) */
+}
+.text {
+  color: var(--gray);
+}
