@@ -4,7 +4,7 @@ Document search from API: search, select document, download with or w/o image.
 
 Notifications will pop up depends on search result.
 
-## Run project with Docker
+## Project Setup via Docker
 
 **build image**
 
