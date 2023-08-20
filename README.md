@@ -5,7 +5,7 @@ Document search from API: search, select document, download with or w/o image.
 Notifications will pop up depends on search result.
 
 
-https://github.com/Magnus-HW/searchpage/assets/31007191/e9a8fcd6-b85e-4fcc-a7a6-bda4adf8a324
+https://github.com/Magnus-HW/searchpage/assets/31007191/6eab7803-4fdb-4f73-b90f-1d282c6ab9ad
 
 
 ## Project Setup via Docker
