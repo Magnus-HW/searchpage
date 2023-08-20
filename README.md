@@ -9,7 +9,7 @@ Notifications will pop up depends on search result.
 **build image**
 
 ```sh
-docker build -t vue-app .
+docker build -t searchpage .
 ```
 
 **run container**
