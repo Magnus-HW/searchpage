@@ -16,7 +16,6 @@ export const useNotificationStore = defineStore('notifications', () => {
       notification.value = newNotif
     } else {
       setTimeout(() => {
-        console.log('new notif');
         notification.value = newNotif
       }, 2000)
     }

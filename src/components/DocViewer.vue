@@ -5,7 +5,7 @@ import { computed } from 'vue';
 
 const selectedDocStore = useSelectedDocStore();
 
-const selectedDoc = computed(() => selectedDocStore.getSelectedDoc());
+const selectedDoc = computed(() => selectedDocStore.selectedDoc);
 
 const handleDeleteMsg = () => {
   actionController.deleteSelectedDocImg()
@@ -52,16 +52,18 @@ const disableDeleteImageBtn = computed(() => selectedDoc.value?.image ? false : 
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+
   /*
     image link doest load
     so style is a bit wrong
   */
   &__image-wrapper {
-    border: 1px solid var(--border-color);
     flex: 1;
     max-height: 50%;
     margin-right: 50px;
+    border: 1px solid var(--border-color);
     display: flex;
+
     &__stub {
       margin: auto;
     }
@@ -78,9 +80,9 @@ const disableDeleteImageBtn = computed(() => selectedDoc.value?.image ? false : 
       margin-bottom: 40px;
 
       &__download {
-        color: var(--primary);
-        border: 1px solid var(--primary);
         margin-right: 15px;
+        border: 1px solid var(--primary);
+        color: var(--primary);
       }
 
       &__delete {
@@ -107,4 +109,5 @@ const disableDeleteImageBtn = computed(() => selectedDoc.value?.image ? false : 
   color: var(--gray);
   border-color: var(--gray);
   cursor: auto;
-}</style>
+}
+</style>

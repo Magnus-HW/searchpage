@@ -1,11 +1,14 @@
-import type { DocAPI } from "./types"
+import type { DocAPI } from './types'
 
+/*
+  May be its overcode, and method txtFileSize could be implevented in TheItem.vue.
+  But this approach is more OOP
+*/
 export class DocObj {
   id: number
   name: string
   description: string
   image?: string
-  docTxt: string
 
   constructor(doc: DocAPI) {
     this.id = doc.id
@@ -14,18 +17,13 @@ export class DocObj {
     if (doc.image) {
       this.image = doc.image
     }
-    this.docTxt = this.toString()
   }
 
-  toString(): string {
+  txtFileSize(): number {
     let docTxt: string = ''
     for (const item of Object.values(this)) {
       docTxt = docTxt + item + '\n'
     }
-    return docTxt
-  }
-
-  txtFileSize() : number {
-    return new Blob([this.docTxt]).size
+    return new Blob([docTxt]).size
   }
 }

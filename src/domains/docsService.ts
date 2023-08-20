@@ -3,6 +3,7 @@ import { docsAPiService } from './docAPIService'
 import { useSelectedDocStore } from '@/stores/selectedDoc'
 import type { DocObj } from '@/entities/DocObj'
 import { NotifMsg, NotifType, useNotificationStore } from '@/stores/notifications'
+import { downloadTxt } from '@/utils'
 
 class DocsService {
 
@@ -18,11 +19,8 @@ class DocsService {
     if (!(docs instanceof Error)) {
       useDocsStore().setDocs(docs)
       if (docs.length == 0) {
-        console.log("empty");
         useNotificationStore().setNotification({ type: NotifType.warning, msg: NotifMsg.warning })
       } else {
-        console.log("found");
-        
         useNotificationStore().setNotification({ type: NotifType.ok, msg: NotifMsg.ok })
       }
     } else {
@@ -39,14 +37,8 @@ class DocsService {
   }
 
   downloadDocAsTxt(doc: DocObj): void {
-    const data: string = doc.docTxt
-    const blob = new Blob([data], { type: 'text/plain' })
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement('a')
-    link.href = url
-    link.download = `${doc.name}.txt`
-    link.click()
-    URL.revokeObjectURL(url)
+    const docTxt = useSelectedDocStore().formDoxTxt()
+    downloadTxt(docTxt, doc.name)
   }
 }
 
