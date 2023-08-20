@@ -4,7 +4,7 @@ Document search from API: search, select document, download with or w/o image.
 
 Notifications will pop up depends on search result.
 
-
+P.S. image in documents won't load because region restriction
 https://github.com/Magnus-HW/searchpage/assets/31007191/6eab7803-4fdb-4f73-b90f-1d282c6ab9ad
 
 
