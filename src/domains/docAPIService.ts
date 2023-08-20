@@ -1,5 +1,6 @@
-import type { DocAPI } from '@/entities/types'
-
+/*
+  docAPIService is responsible for fetching docs from API
+*/
 const DOCS_API = import.meta.env.VITE_DOCS_API
 
 class docsAPI {
@@ -27,3 +28,10 @@ class docsAPI {
 }
 
 export const docsAPiService = new docsAPI(DOCS_API)
+
+export interface DocAPI {
+  id: number
+  name: string,
+  description: string,
+  image?: string
+}

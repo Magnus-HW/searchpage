@@ -5,6 +5,11 @@ import type { DocObj } from '@/entities/DocObj'
 import { NotifMsg, NotifType, useNotificationStore } from '@/stores/notifications'
 import { downloadTxt } from '@/utils'
 
+/*
+  docsService is responsible for handling buisness logic:
+  it transfers user action to app logic,
+  by using implementation of other services and stores
+*/
 class DocsService {
 
   /*

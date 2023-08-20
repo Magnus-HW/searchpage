@@ -2,6 +2,11 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import type { DocObj } from '@/entities/DocObj'
 
+/*
+  Acts like v-model for form.
+  Contains method to update state: deleteImage.
+  Other method can implemented for example to edit doc's description etc.
+*/
 export const useSelectedDocStore = defineStore('selectedDoc', () => {
   const selectedDoc = ref<DocObj | null>(null)
 

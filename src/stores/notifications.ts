@@ -1,6 +1,9 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
+/*
+  Notification store used to signal about the result of the API request
+*/
 export const useNotificationStore = defineStore('notifications', () => {
   const notification = ref<Notification>(null)
 

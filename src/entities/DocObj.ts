@@ -1,4 +1,4 @@
-import type { DocAPI } from './types'
+import type { DocAPI } from '@/domains/docAPIService'
 
 /*
   May be its overcode, and method txtFileSize could be implevented in TheItem.vue.

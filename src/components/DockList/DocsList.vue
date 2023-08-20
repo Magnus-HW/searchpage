@@ -5,7 +5,7 @@ import { computed } from 'vue';
 import { actionController } from '@/domains/actionsController';
 import type { DocObj } from '@/entities/DocObj';
 
-const docs = computed(() => useDocsStore().getDocs());
+const docs = computed(() => useDocsStore().docs);
 
 const handleDocSelect = (doc: DocObj) => {
   actionController.selectDoc(doc)
